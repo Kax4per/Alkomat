@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="favicon.jpg" type="image/x-icon">
+    <title>Breathalyzer</title>
+</head>
+
+<body>
+
+    <header class="header">
+        <h1>Breathalyzer</h1><br><h2><a href="http://piro.wikidot.com/teoria" target="_blank" class="info">INFO</a></h2>
+    </header>
+
+    <main class="main container">
+        <section class="CalculateAlcohol card p-4 mb-4">
+            <h1 class="calculatorName">Calculate the Amount of Alcohol in a Drink</h1>
+
+            <h3>Enter the amount of consumed alcohol in ml</h3>
+            <input type="number" id="AmountInMl" class="form-control mb-3">
+
+            <h3>Enter the percentage of alcohol in the drink</h3>
+            <input type="number" id="Percentage" class="form-control mb-3">
+
+            <button onclick="CalculateAlcohol()" class="btn btn-dark mr-2">Calculate</button>
+            <button onclick="Reset()" class="btn btn-secondary">Reset</button>
+
+            <div class="mt-3">
+                <label>Amount of alcohol</label>
+                <p id="AlcoholAmountResult" class="p-2 bg-light"></p>
+                <label>Total amount of alcohol</label>
+                <p id="TotalAlcoholAmount" class="p-2 bg-light"></p>
+            </div>
+        </section>
+
+        <section class="Breathalyzer card p-4">
+            <h1 class="calculatorName">Calculate BAC and Time to Sober Up</h1>
+            <section class="options">
+
+                <label>Gender</label>
+                <div class="form-check">
+                    <input type="radio" name="gender" id="genderM" class="form-check-input">
+                    <label class="form-check-label" for="genderM">M</label>
+                </div>
+                <div class="form-check">
+                    <input type="radio" name="gender" id="genderF" class="form-check-input">
+                    <label class="form-check-label" for="genderF">F</label>
+                </div>
+
+                <label>Weight (kg)</label>
+                <input type="number" id="weight" class="form-control mb-3">
+
+                <label>Height (cm)</label>
+                <input type="number" id="height" class="form-control mb-3">
+
+                <label>Hours since last drink</label>
+                <input type="number" id="hoursSinceLastDrink" class="form-control mb-3">
+
+                <button onclick="CalculateBAC()" class="btn btn-dark mb-3">Calculate</button>
+
+                <label>BAC</label>
+                <p id="bac" class="p-2 bg-light"></p>
+
+                <label>Time to Sober Up</label>
+                <p id="time" class="p-2 bg-light"></p>
+                
+            </section>
+        </section>
+    </main>
+
+    <footer class="footer bg-dark text-white text-center py-3">
+        <label>KAPCER SIWOŃ</label>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="app.js"></script>
+
+</body>
+
+</html>
+
+
+
+
+
+<!--KACPER SIWOŃ-->
